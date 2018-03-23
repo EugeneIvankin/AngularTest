@@ -1,0 +1,11 @@
+agm-map {
+  height: 400px;
+}
+
+h4 {
+  margin: 0 auto;
+}
+
+.modal-header .close{
+  margin: -1rem -1rem -1rem 0;
+}
