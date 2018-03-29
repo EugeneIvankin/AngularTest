@@ -1,31 +1,32 @@
-
-<div class="modal-header">
+<div class="backgroundModalWin">
+<div class="modalWinContent col-8 col-sm-8 col-md-6 col-lg-6 col-xl-6">
+<div class="modalWinHeader">
   <i class="fas fa-user fa-2x"></i>
-  <h4>{{user.name}}</h4>
-  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-    <span aria-hidden="true">&times;</span>
-  </button>
+  <h4>{{user?.name}}</h4>
+  <a routerLink=""><i class="fas fa-times"></i></a>
 </div>
-<div class="modal-body">
-  <p><i class="fas fa-user-circle"></i> Ник: {{user.username}}<p>
-  <p><i class="fas fa-at"></i> E-mail : {{user.email}}</p>
-  <p><i class="fas fa-phone"></i> Телефон : {{user.phone}}</p>
-  <p><i class="fas fa-globe"></i> Сайт пользователя: <a href="#">{{user.website}}</a></p>
+<div>
+  <p><i class="fas fa-user-circle"></i> Ник: {{user?.username}}<p>
+  <p><i class="fas fa-at"></i> E-mail : {{user?.email}}</p>
+  <p><i class="fas fa-phone"></i> Телефон : {{user?.phone}}</p>
+  <p><i class="fas fa-globe"></i> Сайт пользователя: <a href="#">{{user?.website}}</a></p>
   <hr>
   <p><i class="fas fa-briefcase"></i> Место работы</p>
-  <p> Фирма : {{user.company.name}}</p>
-  <p> Слоган : {{user.company.catchPhrase}}</p>
-  <p> Область деятельности : {{user.company.bs}}</p>
+  <p> Фирма : {{user?.company.name}}</p>
+  <p> Слоган : {{user?.company.catchPhrase}}</p>
+  <p> Область деятельности : {{user?.company.bs}}</p>
   <hr>
   <p><i class="fas fa-home"></i> Домашний адрес</p>
-  <p> Улица : {{user.address.street}}</p> 
-  <p> Район : {{user.address.suite}}</p>
-  <p> Город : {{user.address.city}}</p>
-  <p> Индекс : {{user.address.zipcode}}</p>
+  <p> Улица : {{user?.address.street}}</p> 
+  <p> Район : {{user?.address.suite}}</p>
+  <p> Город : {{user?.address.city}}</p>
+  <p> Индекс : {{user?.address.zipcode}}</p>
   <agm-map [latitude]="lat" [longitude]="lng">
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
   </agm-map>
 </div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-outline-danger" (click)="activeModal.close('Close click')">Close</button>
+<div class="modalWinFooter">
+  <button type="button" class="btn btn-outline-danger" routerLink="">Close</button>
+</div> 
+</div>
 </div>

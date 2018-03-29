@@ -1,11 +1,51 @@
+.backgroundModalWin {
+  width: 100vw;
+  height: 100vh;
+  background-color:rgba(93, 95, 93, 0.6);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modalWinContent {
+  position: absolute;
+  top: 40px;
+  margin-bottom: 60px;
+  background-color: white;
+  padding: 3%;
+  border-radius: 10px;
+  pointer-events: auto;
+}
+
+.modalWinHeader {
+  margin-bottom: 10px;
+}
+
+.svg-inline--fa.fa-times.fa-w-12 {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.svg-inline--fa.fa-times.fa-w-12:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.modalWinFooter {
+  margin-top: 30px;
+  text-align: right;
+}
+
 agm-map {
   height: 400px;
 }
 
 h4 {
   margin: 0 auto;
-}
-
-.modal-header .close{
-  margin: -1rem -1rem -1rem 0;
+  display: inline;
 }

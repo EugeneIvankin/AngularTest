@@ -1,4 +1,4 @@
-export class User{
+export class User {
     id: number;
     name: string;
     username: string;
@@ -12,12 +12,12 @@ export class User{
             lat: string;
             lng: string;
         }
-    }
+    };
     phone: string;
     website: string;
     company: {
         name: string;
         catchPhrase: string;
         bs: string;
-    }
+    };
 }

@@ -1,23 +1,27 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UserFullInfoComponent } from '../userFullInfo.component/userFullInfo.component';
 import { User } from '../user';
+import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'user-card',
+  selector: 'app-user-card',
   templateUrl: './userCard.component.html',
   styleUrls: ['./userCard.component.css']
 })
 
-export class UserCard {
+export class UserCardComponent {
   @Input() user: User;
-  
-  constructor(private modalService: NgbModal){  }
+
+  constructor(private router: Router) {}
 
   open() {
-    const modalRef = this.modalService.open(UserFullInfoComponent);
-    modalRef.componentInstance.user = this.user;
+    this.router.navigate(['full_info_about'],
+      {
+        queryParams: {
+          'id': this.user.id
+        }
+      });
   }
 }

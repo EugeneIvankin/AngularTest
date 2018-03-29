@@ -3,15 +3,14 @@ import { HttpService } from '../http.service';
 import { User } from '../user';
 
 @Component({
-  selector: 'users-dashboard',
+  selector: 'app-users-dashboard',
   templateUrl: './usersDashboard.component.html',
   styleUrls: ['./usersDashboard.component.css']
 })
 
-export class UsersDashboard {
+export class UsersDashboardComponent {
 
   users: User[];
-  
   constructor(private httpService: HttpService) {
     this.getUsers();
   }
